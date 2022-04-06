@@ -1,0 +1,102 @@
+---
+---
+
+/* defaults & variables -------------------------------- */
+
+:root {
+	--col: 250px;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+/* common ---------------------------------------------- */
+
+html {
+	font-family: 'georgia', serif;
+	font-size: 20px;
+
+	body {
+		font-size: 1rem;
+		line-height: 1.5rem;
+
+		background-color: #fff;
+		color: #000;
+
+		min-height: 100vh;
+		margin: 0;
+
+		main {
+			padding: 3rem;
+		}
+
+		h1, h2, h3 {
+			font-family: 'circe', sans-serif;
+			margin: 0;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.wrapper {
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	}
+}
+
+/* header ---------------------------------------------- */
+
+header {
+	background-color: #345;
+
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+
+	.logo {
+		height: 50px;
+	}
+
+	nav {
+		a {
+			text-decoration: none;
+			color: #fff;
+
+			&.current {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+/* main ------------------------------------------------ */
+
+main {
+
+}
+
+/* footer ---------------------------------------------- */
+
+footer {
+	background-color: #345;
+
+	position: sticky;
+	top: 100%;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
