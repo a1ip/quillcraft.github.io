@@ -16,7 +16,7 @@
 /* common ---------------------------------------------- */
 
 html {
-	font-family: 'georgia', serif;
+	font-family: sans-serif;
 	font-size: 20px;
 
 	body {
@@ -30,11 +30,10 @@ html {
 		margin: 0;
 
 		main {
-			padding: 3rem;
+			padding: 0;
 		}
 
 		h1, h2, h3 {
-			font-family: 'circe', sans-serif;
 			margin: 0;
 		}
 
@@ -55,6 +54,7 @@ html {
 /* header ---------------------------------------------- */
 
 header {
+	z-index: 999;
 	background-color: #345;
 
 	position: sticky;
@@ -84,7 +84,83 @@ header {
 /* main ------------------------------------------------ */
 
 main {
+	#feed {
+		display: grid;
+		column-gap: 1rem;
+		grid-template-columns: 0 50px 25px 25px 1fr 0;
 
+		.year {
+			display: grid;
+			column-gap: 1rem;
+			grid-template-columns: 50px 25px 25px 1fr;
+			grid-column: 2 / span 4;
+
+			&::before {
+				content: attr(data-value);
+
+				grid-column: 1;
+				align-self: start;
+				position: sticky;
+				top: 50px;
+				padding: 1.5rem 0;
+			}
+
+			.month {
+				display: grid;
+				column-gap: 1rem;
+				grid-template-columns: 25px 25px 1fr;
+				grid-column: 2 / span 3;
+
+				&::before {
+					content: attr(data-value);
+
+					grid-column: 1;
+					align-self: start;
+					position: sticky;
+					top: 50px;
+					padding: 1.5rem 0;
+				}
+
+				.day {
+					display: grid;
+					column-gap: 1rem;
+					grid-template-columns: 25px 1fr;
+					grid-column: 2 / span 2;
+
+					&::before {
+						content: attr(data-value);
+
+						grid-column: 1;
+						align-self: start;
+						position: sticky;
+						top: 50px;
+						padding: 1.5rem 0;
+					}
+
+					> div {
+						grid-column: 2;
+						padding: 1.5rem 0;
+					}
+
+					> div + div {
+						border-top: 1px solid #ccc;
+					}
+				}
+
+				> .day + .day {
+					border-top: 1px solid #ccc;
+				}
+			}
+
+			> .month + .month {
+				border-top: 1px solid #ccc;
+			}
+		}
+
+		> .year + .year {
+			border-top: 1px solid #ccc;
+		}
+	}
 }
 
 /* footer ---------------------------------------------- */
