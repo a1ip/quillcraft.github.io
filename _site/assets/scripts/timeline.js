@@ -1,7 +1,9 @@
 (function() {
 	const feed = document.getElementById('feed')
-	const list = Array.from(feed.children)
 
+	if (!feed) return
+
+	const list = Array.from(feed.children)
 	const years = [...new Set(list.map(d => d.dataset.year))]
 
 	years.forEach(year => {

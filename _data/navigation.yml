@@ -1,6 +1,6 @@
 - name: Новости
   link: /
-# - name: Проекты
-#   link: /projects/
-# - name: Профиль
-#   link: /profile/
+- name: Проекты
+  link: /projects/
+- name: Профиль
+  link: /profile/

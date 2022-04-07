@@ -1,7 +1,5 @@
 @charset "UTF-8";
 /* defaults & variables -------------------------------- */
-:root { --col: 250px; }
-
 *, ::before, ::after { box-sizing: border-box; }
 
 /* common ---------------------------------------------- */
