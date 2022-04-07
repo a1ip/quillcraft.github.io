@@ -29,6 +29,9 @@
 				const posts = postsByDay
 
 				posts.forEach(post => {
+					const props = post.dataset
+					for (key in props) delete props[key]
+
 					divDay.appendChild(post)
 				})
 
