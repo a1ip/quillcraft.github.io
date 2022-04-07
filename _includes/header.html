@@ -1,0 +1,15 @@
+<header>
+	<div class="wrapper">
+		<a href="/" class="logo">
+			<img src="/assets/images/journal-logo.svg" alt="Логотип Журнал"/>
+		</a>
+		<nav>
+			{% for item in site.data.navigation %}
+			<a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %}>
+				{{ item.name }}
+			</a>
+			{% endfor %}
+		</nav>
+		{% include socials.html %}
+	</div>
+</header>
