@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#334">
+	<link rel="stylesheet" href="https://use.typekit.net/axb1coe.css">
+	<link rel="stylesheet" href="/assets/css/styles.css"/>
+	<link rel="stylesheet" href="/assets/css/github.css"/>
+	{% feed_meta %}
+	{% seo %}
+	<title>{{ page.title }}</title>
+</head>
+<body>
+	{% include header.html %}
+	<main>
+		{{ content }}
+	</main>
+	{% include footer.html %}
+	<script src="/assets/scripts/timeline.js"></script>
+</body>
+</html>
