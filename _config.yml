@@ -18,13 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ЖМИ
+title: Журнал
 email: mizinov.anton@gmail.com
 description: Журнал моих заметок о дизайне, инфографике и визуализации данных.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://mizinov.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: anton_mizinov
-github_username:  quillcraft
+baseurl: ""
+url: "https://mizinov.com"
+github_username: quillcraft
 
 # Build settings
 theme: minima
