@@ -5,7 +5,7 @@
 
 :root {
 	--base-size: 20px;
-	--head-width: 100%;
+	--head-width: 900px;
 	--main-width: 900px;
 }
 
@@ -50,7 +50,7 @@ header {
 
 	.wrapper {
 		display: grid;
-		grid-template-columns: 0 150px auto auto 0;
+		grid-template-columns: 0 158px auto auto 0;
 		column-gap: 1rem;
 		align-items: center;
 		max-width: var(--head-width);
@@ -65,7 +65,7 @@ header {
 			font-feature-settings: 'ss02';
 			font-size: .75rem;
 			line-height: 1rem;
-			letter-spacing: 1px;
+			letter-spacing: 0.05rem;
 			text-transform: uppercase;
 
 			border-left: 1px solid #778;
@@ -74,7 +74,7 @@ header {
 			display: flex;
 			flex-flow: row nowrap;
 			align-items: center;
-			height: 34px;
+			height: 36px;
 
 			a {
 				text-decoration: none;
@@ -97,7 +97,7 @@ header {
 /* main ------------------------------------------------ */
 
 main {
-	.wrapper {
+	.pagination {
 		border-top: 1px solid #eee;
 		border-bottom: none;
 
@@ -105,49 +105,54 @@ main {
 			border-top: none;
 			border-bottom: 1px solid #eee;
 		}
-	}
 
-	.pagination {
-		position: relative;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: 1rem;
-		max-width: 300px;
-		margin: 0 auto;
-		padding: 1rem;
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: 1rem;
+			max-width: var(--main-width);
+			margin: 0 auto;
+			padding: 1.25rem 1rem 1rem 1rem;
 
-		* {
-			font-feature-settings: 'tnum';
-			font-size: .6rem;
-			line-height: .6rem;
-			letter-spacing: .1rem;
-			text-transform: uppercase;
+			* {
+				font-feature-settings: 'tnum';
+				font-size: .6rem;
+				line-height: .6rem;
+				letter-spacing: .1rem;
+				text-transform: uppercase;
 
-			&.previous {
-				grid-column: 1;
-				justify-self: start;
+				&.previous {
+					grid-column: 1;
+					justify-self: start;
+				}
+
+				&.page-number {
+					grid-column: 2;
+					justify-self: center;
+				}
+
+				&.next {
+					grid-column: 3;
+					justify-self: end;
+				}
 			}
 
-			&.page-number {
-				grid-column: 2;
-				justify-self: center;
+			span {
+				color: #778;
 			}
 
-			&.next {
-				grid-column: 3;
-				justify-self: end;
-			}
-		}
+			a {
+				text-decoration: none;
+				color: #778;
 
-		a,
-		span {
-			text-decoration: none;
-			color: #778;
+				&:hover {
+					color: #334;
+				}
+			}
 		}
 	}
 
 	.article {
-		position: relative;
 		display: grid;
 		grid-template-columns: 0 1fr 0;
 		column-gap: 1rem;
@@ -161,7 +166,6 @@ main {
 	}
 
 	.feed {
-		position: relative;
 		display: grid;
 		grid-template-columns: 0 1fr 0;
 		column-gap: 1rem;
@@ -209,7 +213,7 @@ main {
 	}
 
 	h1 {
-		font-feature-settings: 'case';
+		font-feature-settings: 'onum';
 		font-weight: 400;
 		font-size: 2rem;
 		line-height: 2rem;
@@ -218,7 +222,7 @@ main {
 	}
 
 	h2 {
-		font-feature-settings: 'case';
+		font-feature-settings: 'onum';
 		font-weight: 400;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
@@ -229,10 +233,14 @@ main {
 			text-decoration: none;
 
 			color: #334;
+
+			&:hover {
+				color: #987;
+			}
 		}
 	}
 
-	p {
+	p, ul, ol {
 		font-family: 'georgia', serif;
 		margin: 1rem 0 0 0;
 	}
