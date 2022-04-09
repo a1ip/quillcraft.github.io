@@ -1,0 +1,15 @@
+<div class="wrapper">
+	<div class="pagination">
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path }}" class="previous">назад</a>
+		{% else %}
+			<span class="previous disabled">назад</span>
+		{% endif %}
+			<span class="page-number">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}" class="next">вперёд</a>
+		{% else %}
+			<span class="next disabled">вперёд</span>
+		{% endif %}
+	</div>
+</div>
