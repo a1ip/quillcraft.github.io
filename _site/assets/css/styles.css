@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* defaults & variables -------------------------------- */
 :root { --base-size: 20px; --head-width: 900px; --main-width: 900px; }
 
@@ -9,6 +10,12 @@ html { font-family: 'circe', sans-serif; font-size: var(--base-size); }
 html body { font-size: 1rem; line-height: 1.5rem; background-color: #fff; color: #334; min-height: 100vh; margin: 0; }
 
 html body img { display: block; width: auto; height: auto; }
+
+html body .video { border: none; width: 800px; height: 516px; }
+
+html body blockquote { font-style: italic; border-left: 5px solid #eee; margin: 3rem 0; padding: 0 0 0 3rem; }
+
+html body blockquote p { margin: 0; }
 
 /* header ---------------------------------------------- */
 header { z-index: 999; background-color: #334; position: sticky; top: 0; }
@@ -26,25 +33,21 @@ header .wrapper nav a:hover { color: #99a; }
 header .wrapper nav a.current { color: #cba; }
 
 /* main ------------------------------------------------ */
-main .pagination { border-top: 1px solid #eee; border-bottom: none; }
+main .pagination { border-top: 1px solid #eee; border-bottom: none; position: relative; }
 
 main .pagination:first-child { border-top: none; border-bottom: 1px solid #eee; }
 
-main .pagination .wrapper { display: grid; grid-template-columns: 1fr 1fr 1fr; column-gap: 1rem; max-width: var(--main-width); margin: 0 auto; padding: 1.25rem 1rem 1rem 1rem; }
+main .pagination:first-child .wrapper { transform: translateY(50%); }
 
-main .pagination .wrapper * { font-feature-settings: 'tnum'; font-size: .6rem; line-height: .6rem; letter-spacing: .1rem; text-transform: uppercase; }
+main .pagination .wrapper { display: flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; width: 150px; margin: 0 auto; transform: translateY(-50%); }
 
-main .pagination .wrapper *.previous { grid-column: 1; justify-self: start; }
+main .pagination .wrapper .prev { background-color: #fff; border: 1px solid #eee; border-radius: 50%; grid-column: 1; justify-self: start; width: 32px; height: 32px; }
 
-main .pagination .wrapper *.page-number { grid-column: 2; justify-self: center; }
+main .pagination .wrapper .page-number { font-size: .75rem; line-height: .75rem; letter-spacing: .1rem; text-transform: uppercase; background-color: #fff; color: #334; border: 1px solid #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding-top: .1rem; }
 
-main .pagination .wrapper *.next { grid-column: 3; justify-self: end; }
+main .pagination .wrapper .next { background-color: #fff; border: 1px solid #eee; border-radius: 50%; grid-column: 3; justify-self: end; width: 32px; height: 32px; }
 
-main .pagination .wrapper span { color: #778; }
-
-main .pagination .wrapper a { text-decoration: none; color: #778; }
-
-main .pagination .wrapper a:hover { color: #334; }
+main .pagination .wrapper .disabled { visibility: hidden; }
 
 main .article { display: grid; grid-template-columns: 0 1fr 0; column-gap: 1rem; max-width: var(--main-width); margin: 0 auto; padding: 3rem 0; }
 
@@ -54,7 +57,7 @@ main .feed { display: grid; grid-template-columns: 0 1fr 0; column-gap: 1rem; ma
 
 main .feed .year, main .feed .month, main .feed .day { border-left: 1px solid #eee; display: grid; grid-template-columns: auto 1fr; grid-column: 2; }
 
-main .feed .year::before, main .feed .month::before, main .feed .day::before { content: attr(data-value); font-feature-settings: 'tnum'; font-size: .75rem; line-height: .75rem; background-color: #eee; border-radius: 0 20px 20px 0; grid-column: 1; align-self: start; position: sticky; top: calc(50px + 2rem); margin: 0 2px 1.5rem 0; padding: 7px 10px 3px 5px; }
+main .feed .year::before, main .feed .month::before, main .feed .day::before { content: attr(data-value); font-feature-settings: 'tnum'; font-size: .75rem; line-height: .75rem; background-color: #eee; border-radius: 0 20px 20px 0; grid-column: 1; align-self: start; position: sticky; top: calc(50px + 2rem); margin: 0 2px 4.5rem 0; padding: 7px 10px 3px 5px; }
 
 main .feed .year .post, main .feed .month .post, main .feed .day .post { grid-column: 2; padding: 0 0 4.5rem 1rem; }
 
@@ -62,13 +65,27 @@ main .feed .year:first-child { margin: 4.5rem 0 0 0; }
 
 main h1 { font-feature-settings: 'onum'; font-weight: 400; font-size: 2rem; line-height: 2rem; margin: 0; }
 
-main h2 { font-feature-settings: 'onum'; font-weight: 400; font-size: 1.5rem; line-height: 1.5rem; margin: 0; }
+main h2 { font-feature-settings: 'onum'; font-weight: 400; font-size: 1.5rem; line-height: 1.5rem; position: relative; margin: 0 0 0 2rem; }
+
+main h2::before { position: absolute; top: 0; left: 0; display: block; width: 2rem; transform: translateX(-100%); }
+
+main h2.book::before { content: '📖'; }
+
+main h2.movie::before { content: '🎬'; }
+
+main h2.event::before { content: '🗓'; }
+
+main h2.infographics::before { content: '💡'; }
+
+main h2.memory::before { content: '†'; }
+
+main h2.tool::before { content: '✒️'; }
 
 main h2 a { text-decoration: none; color: #334; }
 
 main h2 a:hover { color: #987; }
 
-main p, main ul, main ol { font-family: 'georgia', serif; margin: 1rem 0 0 0; }
+main p, main ul, main ol { font-family: 'georgia', serif; -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; margin: 1rem 0 0 2rem; }
 
 /* footer ---------------------------------------------- */
 footer { font-feature-settings: 'ss02'; font-size: .75rem; line-height: 1rem; letter-spacing: 1px; text-transform: uppercase; background-color: #cba; color: #334; position: sticky; top: 100%; }
