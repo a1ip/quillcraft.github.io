@@ -1,14 +1,15 @@
 ---
 layout: default
 title: Новости
-permalink: /
 ---
-<div id="feed" class="wrapper">
-	{% for post in site.posts %}
+{% include paginator.html %}
+<div class="feed">
+	{% for post in paginator.posts %}
 	<div class="post" data-year="{{ post.date | date: '%Y' }}" data-month="{{ post.date | date: '%m' }}" data-day="{{ post.date | date: '%d' }}">
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<h2 class="{{ post.category }}"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 		{{ post.excerpt }}
 	</div>
 	{% endfor %}
 </div>
+{% include paginator.html %}
 <script src="/assets/scripts/timeline.js"></script>
