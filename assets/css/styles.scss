@@ -5,7 +5,7 @@
 
 :root {
 	--base-size: 20px;
-	--head-width: 900px;
+	--head-width: 1200px;
 	--main-width: 900px;
 }
 
@@ -66,18 +66,19 @@ header {
 
 	position: sticky;
 	top: 0;
+	padding: .5rem 0;
 
 	.wrapper {
-		display: grid;
-		grid-template-columns: 0 158px auto auto 0;
-		column-gap: 1rem;
-		align-items: center;
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: stretch;
+		width: calc(100% - 2rem);
 		max-width: var(--head-width);
 		margin: 0 auto;
 
 		.logo {
-			grid-column: 2;
-			margin: 10px 0;
+			width: 150px;
+			height: auto;
 		}
 
 		nav {
@@ -89,26 +90,50 @@ header {
 
 			border-left: 1px solid #778;
 
-			grid-column: 3;
 			display: flex;
 			flex-flow: row nowrap;
 			align-items: center;
-			height: 36px;
+			padding-top: .1rem;
 
 			a {
 				text-decoration: none;
-				color: #778;
+				color: #fff;
+				opacity: .5;
 
 				margin-left: 1rem;
 
 				&:hover {
-					color: #99a;
+					opacity: .75;
 				}
 
 				&.current {
+					opacity: 1;
 					color: #cba;
 				}
 			}
+		}
+
+		.socials {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			flex-grow: 1;
+			justify-content: flex-end;
+
+			a {
+				opacity: .25;
+
+				width: 26px;
+				height: 26px;
+
+				&:hover {
+					opacity: .5;
+				}
+			}
+		}
+
+		> * + * {
+			margin-left: 1rem;
 		}
 	}
 }
@@ -117,14 +142,14 @@ header {
 
 main {
 	.pagination {
-		border-top: 1px solid #eee;
+		border-top: 1px solid #ddd;
 		border-bottom: none;
 
 		position: relative;
 
 		&:first-child {
 			border-top: none;
-			border-bottom: 1px solid #eee;
+			border-bottom: 1px solid #ddd;
 
 			.wrapper {
 				transform: translateY(50%);
@@ -143,7 +168,7 @@ main {
 			.prev {
 				background-color: #fff;
 
-				border: 1px solid #eee;
+				border: 1px solid #ddd;
 				border-radius: 50%;
 
 				grid-column: 1;
@@ -161,7 +186,7 @@ main {
 				background-color: #fff;
 				color: #334;
 
-				border: 1px solid #eee;
+				border: 1px solid #ddd;
 				border-radius: 50%;
 
 				display: flex;
@@ -175,7 +200,7 @@ main {
 			.next {
 				background-color: #fff;
 
-				border: 1px solid #eee;
+				border: 1px solid #ddd;
 				border-radius: 50%;
 
 				grid-column: 3;
@@ -278,6 +303,10 @@ main {
 			transform: translateX(-100%);
 		}
 
+		&.common::before {
+			content: '';
+		}
+
 		&.book::before {
 			content: '📖';
 		}
@@ -295,7 +324,7 @@ main {
 		}
 
 		&.memory::before {
-			content: '†';
+			content: '🪦'; /*†*/
 		}
 
 		&.tool::before {

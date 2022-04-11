@@ -1,16 +1,16 @@
 <div class="pagination">
 	<div class="wrapper">
 		{% if paginator.previous_page %}
-			<a href="{{ paginator.previous_page_path }}" class="prev">
-				<img src="/assets/images/prev.svg" width="30" height="30" alt="новее"/>
+			<a href="{{ paginator.previous_page_path }}" class="prev" title="новее">
+				<img src="/assets/images/icon-prev.svg" alt="новее" width="30" height="30"/>
 			</a>
 		{% else %}
 			<span class="prev disabled"></span>
 		{% endif %}
 			<span class="page-number">{{ paginator.page }}/{{ paginator.total_pages }}</span>
 		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path }}" class="next">
-				<img src="/assets/images/next.svg" width="30" height="30" alt="старее"/>
+			<a href="{{ paginator.next_page_path }}" class="next" title="старее">
+				<img src="/assets/images/icon-next.svg" alt="старее" width="30" height="30"/>
 			</a>
 		{% else %}
 			<span class="next disabled"></span>
