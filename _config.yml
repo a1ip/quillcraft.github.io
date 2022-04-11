@@ -20,7 +20,7 @@
 
 title: Журнал
 email: mizinov.anton@gmail.com
-description: Журнал моих заметок о дизайне, инфографике и визуализации данных.
+description: Личный журнал заметок о дизайне, инфографике и просто мысли вслух.
 baseurl: ""
 url: "https://mizinov.com"
 github_username: quillcraft
@@ -33,6 +33,7 @@ plugins:
 
 paginate: 20
 paginate_path: "/blog/page:num/"
+permalink: pretty
 
 # Exclude from processing.
 # The following items will not be processed, by default.
