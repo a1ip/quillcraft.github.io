@@ -13,10 +13,6 @@ html body img { display: block; width: auto; height: auto; }
 
 html body .video { border: none; width: 800px; height: 516px; }
 
-html body blockquote { font-style: italic; border-left: 5px solid #eee; margin: 3rem 0; padding: 0 0 0 3rem; }
-
-html body blockquote p { margin: 0; }
-
 /* header ---------------------------------------------- */
 header { z-index: 999; background-color: #334; position: sticky; top: 0; padding: .5rem 0; }
 
@@ -57,9 +53,19 @@ main .pagination .wrapper .next { background-color: #fff; border: 1px solid #ddd
 
 main .pagination .wrapper .disabled { visibility: hidden; }
 
-main .article { display: grid; grid-template-columns: 0 1fr 0; column-gap: 1rem; max-width: var(--main-width); margin: 0 auto; padding: 3rem 0; }
+main .article { width: calc(100% - 2rem); max-width: calc(var(--main-width) - 2rem); margin: 0 auto; padding: 3rem 0; }
 
-main .article > * { grid-column: 2; }
+main .article h1 { font-feature-settings: 'onum'; font-size: 2rem; line-height: 2rem; margin: 0; }
+
+main .article p, main .article ul, main .article ol { -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; font-feature-settings: 'onum'; max-width: calc(100% - 4rem); margin: 1rem auto 0 auto; padding: 0; }
+
+main .article p li, main .article ul li, main .article ol li { margin: 0 0 0 1rem; }
+
+main .article .date { font-size: .65rem; line-height: .65rem; letter-spacing: .05rem; text-transform: uppercase; color: #778; margin-bottom: 1rem; }
+
+main .article blockquote { font-style: italic; border-left: 5px solid #eee; max-width: calc(100% - 4rem); margin: 3rem auto; padding: 0 0 0 1.5rem; }
+
+main .article blockquote p { margin: 0; }
 
 main .feed { display: grid; grid-template-columns: 0 1fr 0; column-gap: 1rem; max-width: var(--main-width); margin: 0 auto; }
 
@@ -71,47 +77,41 @@ main .feed .year .post, main .feed .month .post, main .feed .day .post { grid-co
 
 main .feed .year:first-child { margin: 4.5rem 0 0 0; }
 
-main h1 { font-feature-settings: 'onum'; font-weight: 400; font-size: 2rem; line-height: 2rem; margin: 0; }
+main .feed h2 { font-feature-settings: 'onum'; font-size: 1.5rem; line-height: 1.5rem; position: relative; margin: 0 0 0 2rem; }
 
-main h2 { font-feature-settings: 'onum'; font-weight: 400; font-size: 1.5rem; line-height: 1.5rem; position: relative; margin: 0 0 0 2rem; }
+main .feed h2::before { position: absolute; top: 0; left: 0; display: block; width: 2rem; transform: translateX(-100%); }
 
-main h2::before { position: absolute; top: 0; left: 0; display: block; width: 2rem; transform: translateX(-100%); }
+main .feed h2.common::before { content: ''; }
 
-main h2.common::before { content: ''; }
+main .feed h2.book::before { content: '📖'; }
 
-main h2.book::before { content: '📖'; }
+main .feed h2.movie::before { content: '🎬'; }
 
-main h2.movie::before { content: '🎬'; }
+main .feed h2.event::before { content: '🗓'; }
 
-main h2.event::before { content: '🗓'; }
+main .feed h2.infographics::before { content: '💡'; }
 
-main h2.infographics::before { content: '💡'; }
+main .feed h2.memory::before { content: '🪦'; }
 
-main h2.memory::before { content: '🪦'; }
+main .feed h2.tool::before { content: '✒️'; }
 
-main h2.tool::before { content: '✒️'; }
+main .feed h2 a { text-decoration: none; color: #334; }
 
-main h2 a { text-decoration: none; color: #334; }
+main .feed h2 a:hover { color: #987; }
 
-main h2 a:hover { color: #987; }
+main .feed p, main .feed ul, main .feed ol { -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; margin: 1rem 0 0 2rem; }
 
-main p, main ul, main ol { font-family: 'georgia', serif; -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; margin: 1rem 0 0 2rem; }
+main .feed p a, main .feed ul a, main .feed ol a { color: #06c; }
 
-main p a, main ul a, main ol a { color: #06c; }
+main .feed p a:visited, main .feed ul a:visited, main .feed ol a:visited { color: #c39; }
 
-main p a:visited, main ul a:visited, main ol a:visited { color: #c39; }
-
-main p a:hover, main ul a:hover, main ol a:hover { text-decoration: none; }
+main .feed p a:hover, main .feed ul a:hover, main .feed ol a:hover { text-decoration: none; }
 
 /* footer ---------------------------------------------- */
 footer { font-feature-settings: 'ss02'; font-size: .75rem; line-height: 1rem; letter-spacing: 1px; text-transform: uppercase; background-color: #cba; color: #334; position: sticky; top: 100%; }
 
-footer .wrapper { display: grid; grid-template-columns: 0 auto auto 0; column-gap: 1rem; max-width: var(--head-width); margin: 0 auto; padding: 1.5rem 0; }
-
-footer .wrapper .copyright { grid-column: 2; }
+footer .wrapper { display: flex; flex-flow: row nowrap; align-items: stretch; width: calc(100% - 2rem); max-width: var(--head-width); margin: 0 auto; padding: 1.5rem 0; }
 
 footer .wrapper .copyright::first-letter { font-family: sans-serif; }
-
-footer .wrapper .description { grid-column: 3; }
 
 /*# sourceMappingURL=styles.css.map */
