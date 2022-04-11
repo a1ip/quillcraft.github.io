@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Blue Valentine / Синяя валентинка"
+category: movie
+---
+По-моему, правильный упрёк жене сделал герой Гослинга: «Ты дала обещание, помнишь? И в горе, и в радости.». Собственно, об этом фильм. Про эгоизм, про ошибки, про отношения которые могли быть и были, но которые спустили в унитаз. Хотя, казалось бы, ну что ей ещё надо-то...
+
+![](https://pics.livejournal.com/quillcraft/pic/0015ap8w)
+
+![](https://pics.livejournal.com/quillcraft/pic/0015dqs9)
+
+![](https://pics.livejournal.com/quillcraft/pic/0015bky2)
+
+![](https://pics.livejournal.com/quillcraft/pic/0015cg2z)
+
+![](https://pics.livejournal.com/quillcraft/pic/0015eyea)
+
+![](https://pics.livejournal.com/quillcraft/pic/0015f574)
