@@ -87,7 +87,7 @@ main h2.event::before { content: '🗓'; }
 
 main h2.infographics::before { content: '💡'; }
 
-main h2.memory::before { content: '🪦'; /*†*/ }
+main h2.memory::before { content: '🪦'; }
 
 main h2.tool::before { content: '✒️'; }
 
@@ -96,6 +96,12 @@ main h2 a { text-decoration: none; color: #334; }
 main h2 a:hover { color: #987; }
 
 main p, main ul, main ol { font-family: 'georgia', serif; -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; margin: 1rem 0 0 2rem; }
+
+main p a, main ul a, main ol a { color: #06c; }
+
+main p a:visited, main ul a:visited, main ol a:visited { color: #c39; }
+
+main p a:hover, main ul a:hover, main ol a:hover { text-decoration: none; }
 
 /* footer ---------------------------------------------- */
 footer { font-feature-settings: 'ss02'; font-size: .75rem; line-height: 1rem; letter-spacing: 1px; text-transform: uppercase; background-color: #cba; color: #334; position: sticky; top: 100%; }

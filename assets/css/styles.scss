@@ -324,7 +324,7 @@ main {
 		}
 
 		&.memory::before {
-			content: '🪦'; /*†*/
+			content: '🪦';
 		}
 
 		&.tool::before {
@@ -363,6 +363,18 @@ main {
 		hyphenate-limit-last: always;
 
 		margin: 1rem 0 0 2rem;
+
+		a {
+			color: #06c;
+
+			&:visited {
+				color: #c39;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }
 
