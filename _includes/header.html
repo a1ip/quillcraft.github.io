@@ -1,7 +1,7 @@
 <header>
 	<div class="wrapper">
-		<a href="/" class="logo">
-			<img src="/assets/images/journal-logo.svg" alt="Логотип Журнал"/>
+		<a class="logo" href="/">
+			<img src="/assets/images/journal-logo.svg" alt="Логотип Журнал" width="150" height="36"/>
 		</a>
 		<nav>
 			{% for item in site.data.navigation %}
@@ -10,5 +10,12 @@
 			</a>
 			{% endfor %}
 		</nav>
+		<div class="socials">
+			{% for item in site.data.socials %}
+				<a href="{{ item.link }}" title="{{ item.name }}">
+					<img src="/assets/images/icon-{{ item.name }}.svg" alt="{{ item.name }}" width="30" height="30"/>
+				</a>
+			{% endfor %}
+		</div>
 	</div>
 </header>
