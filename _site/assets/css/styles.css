@@ -7,7 +7,7 @@
 /* common ---------------------------------------------- */
 html { font-family: 'circe', sans-serif; font-size: var(--base-size); }
 
-html body { font-size: 1rem; line-height: 1.5rem; background-color: #fff; color: #334; min-height: 100vh; margin: 0; }
+html body { font-size: 1.05rem; line-height: 1.5rem; background-color: #fff; color: #334; min-height: 100vh; margin: 0; }
 
 html body img { display: block; width: auto; height: auto; }
 
@@ -20,7 +20,7 @@ header .wrapper { display: flex; flex-flow: row nowrap; align-items: stretch; wi
 
 header .wrapper .logo { width: 150px; height: auto; }
 
-header .wrapper nav { font-feature-settings: 'ss02'; font-size: .75rem; line-height: 1rem; letter-spacing: 0.05rem; text-transform: uppercase; border-left: 1px solid #778; display: flex; flex-flow: row nowrap; align-items: center; padding-top: .1rem; }
+header .wrapper nav { font-feature-settings: 'ss02'; font-size: .8rem; line-height: 1rem; letter-spacing: 0.05rem; text-transform: uppercase; border-left: 1px solid #778; display: flex; flex-flow: row nowrap; align-items: center; padding-top: .1rem; }
 
 header .wrapper nav a { text-decoration: none; color: #fff; opacity: .5; margin-left: 1rem; }
 
@@ -30,9 +30,9 @@ header .wrapper nav a.current { opacity: 1; color: #cba; }
 
 header .wrapper .socials { display: flex; flex-flow: row nowrap; align-items: center; flex-grow: 1; justify-content: flex-end; }
 
-header .wrapper .socials a { opacity: .25; width: 26px; height: 26px; }
+header .wrapper .socials a { opacity: .5; width: 26px; height: 26px; }
 
-header .wrapper .socials a:hover { opacity: .5; }
+header .wrapper .socials a:hover { opacity: .75; }
 
 header .wrapper > * + * { margin-left: 1rem; }
 
@@ -45,23 +45,33 @@ main .pagination:first-child .wrapper { transform: translateY(50%); }
 
 main .pagination .wrapper { display: flex; flex-flow: row nowrap; align-items: center; justify-content: space-between; width: 150px; margin: 0 auto; transform: translateY(-50%); }
 
-main .pagination .wrapper .prev { background-color: #fff; border: 1px solid #ddd; border-radius: 50%; grid-column: 1; justify-self: start; width: 32px; height: 32px; }
+main .pagination .wrapper .prev { background-color: #fff; border: 1px solid #ddd; border-radius: 50%; justify-self: start; width: 32px; height: 32px; }
 
-main .pagination .wrapper .page-number { font-size: .75rem; line-height: .75rem; letter-spacing: .1rem; text-transform: uppercase; background-color: #fff; color: #334; border: 1px solid #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding-top: .1rem; }
+main .pagination .wrapper .page-number { font-size: .8rem; line-height: .8rem; letter-spacing: .1rem; text-transform: uppercase; background-color: #fff; color: #334; border: 1px solid #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; padding-top: .1rem; }
 
-main .pagination .wrapper .next { background-color: #fff; border: 1px solid #ddd; border-radius: 50%; grid-column: 3; justify-self: end; width: 32px; height: 32px; }
+main .pagination .wrapper .next { background-color: #fff; border: 1px solid #ddd; border-radius: 50%; justify-self: end; width: 32px; height: 32px; }
 
 main .pagination .wrapper .disabled { visibility: hidden; }
 
 main .article { width: calc(100% - 2rem); max-width: calc(var(--main-width) - 2rem); margin: 0 auto; padding: 3rem 0; }
 
-main .article h1 { font-feature-settings: 'onum'; font-size: 2rem; line-height: 2rem; margin: 0; }
+main .article h1 { font-feature-settings: 'onum'; font-size: 2.05rem; line-height: 2rem; margin: 1.5rem 0 0 0; }
 
-main .article p, main .article ul, main .article ol { -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; font-feature-settings: 'onum'; max-width: calc(100% - 4rem); margin: 1rem auto 0 auto; padding: 0; }
+main .article h2 { font-feature-settings: 'onum'; font-size: 1.6rem; line-height: 2rem; margin: 1.5rem 0 0 0; }
 
-main .article p li, main .article ul li, main .article ol li { margin: 0 0 0 1rem; }
+main .article h3 { font-feature-settings: 'onum'; font-size: 1.2rem; line-height: 2rem; margin: 1.5rem 0 0 0; }
 
-main .article .date { font-size: .65rem; line-height: .65rem; letter-spacing: .05rem; text-transform: uppercase; color: #778; margin-bottom: 1rem; }
+main .article h4, main .article p, main .article ul, main .article ol { -webkit-hyphens: auto; -webkit-hyphenate-limit-chars: 6 3 2; -webkit-hyphenate-limit-lines: 3; -webkit-hyphenate-limit-last: always; -moz-hyphens: auto; -moz-hyphenate-limit-chars: 6 3 2; -moz-hyphenate-limit-lines: 3; -moz-hyphenate-limit-last: always; -ms-hyphens: auto; -ms-hyphenate-limit-chars: 6 3 2; -ms-hyphenate-limit-lines: 3; -ms-hyphenate-limit-last: always; hyphens: auto; hyphenate-limit-chars: 6 3 2; hyphenate-limit-lines: 3; hyphenate-limit-last: always; font-feature-settings: 'onum'; max-width: calc(100% - 4rem); margin: 1rem auto 0 auto; padding: 0; }
+
+main .article h4 li, main .article p li, main .article ul li, main .article ol li { margin: .5rem 0 0 1.5rem; }
+
+main .article h4 a, main .article p a, main .article ul a, main .article ol a { color: #06c; }
+
+main .article h4 a:visited, main .article p a:visited, main .article ul a:visited, main .article ol a:visited { color: #c39; }
+
+main .article h4 a:hover, main .article p a:hover, main .article ul a:hover, main .article ol a:hover { text-decoration: none; }
+
+main .article .date { font-feature-settings: 'ss02'; font-size: .65rem; line-height: .65rem; letter-spacing: .05rem; text-transform: uppercase; color: #778; margin-bottom: 1rem; }
 
 main .article blockquote { font-style: italic; border-left: 5px solid #eee; max-width: calc(100% - 4rem); margin: 3rem auto; padding: 0 0 0 1.5rem; }
 
@@ -71,13 +81,13 @@ main .feed { display: grid; grid-template-columns: 0 1fr 0; column-gap: 1rem; ma
 
 main .feed .year, main .feed .month, main .feed .day { border-left: 1px solid #eee; display: grid; grid-template-columns: auto 1fr; grid-column: 2; }
 
-main .feed .year::before, main .feed .month::before, main .feed .day::before { content: attr(data-value); font-feature-settings: 'tnum'; font-size: .75rem; line-height: .75rem; background-color: #eee; border-radius: 0 20px 20px 0; grid-column: 1; align-self: start; position: sticky; top: calc(50px + 2rem); margin: 0 2px 4.5rem 0; padding: 7px 10px 3px 5px; }
+main .feed .year::before, main .feed .month::before, main .feed .day::before { content: attr(data-value); font-feature-settings: 'tnum'; font-size: .8rem; line-height: .8rem; background-color: #eee; border-radius: 0 20px 20px 0; grid-column: 1; align-self: start; position: sticky; top: calc(50px + 2rem); margin: 0 2px 4.5rem 0; padding: 7px 10px 3px 5px; }
 
 main .feed .year .post, main .feed .month .post, main .feed .day .post { grid-column: 2; padding: 0 0 4.5rem 1rem; }
 
 main .feed .year:first-child { margin: 4.5rem 0 0 0; }
 
-main .feed h2 { font-feature-settings: 'onum'; font-size: 1.5rem; line-height: 1.5rem; position: relative; margin: 0 0 0 2rem; }
+main .feed h2 { font-feature-settings: 'onum'; font-size: 1.6rem; line-height: 2rem; position: relative; margin: 0 0 0 2rem; }
 
 main .feed h2::before { position: absolute; top: 0; left: 0; display: block; width: 2rem; transform: translateX(-100%); }
 
@@ -107,8 +117,10 @@ main .feed p a:visited, main .feed ul a:visited, main .feed ol a:visited { color
 
 main .feed p a:hover, main .feed ul a:hover, main .feed ol a:hover { text-decoration: none; }
 
+main .feed img { border: 1px solid #eee; }
+
 /* footer ---------------------------------------------- */
-footer { font-feature-settings: 'ss02'; font-size: .75rem; line-height: 1rem; letter-spacing: 1px; text-transform: uppercase; background-color: #cba; color: #334; position: sticky; top: 100%; }
+footer { font-feature-settings: 'ss02'; font-size: .8rem; line-height: 1rem; letter-spacing: 1px; text-transform: uppercase; background-color: #cba; color: #334; position: sticky; top: 100%; }
 
 footer .wrapper { display: flex; flex-flow: row nowrap; align-items: stretch; width: calc(100% - 2rem); max-width: var(--head-width); margin: 0 auto; padding: 1.5rem 0; }
 
