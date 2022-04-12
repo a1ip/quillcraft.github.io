@@ -3,7 +3,7 @@ layout: post
 title: "Немного типографического занудства"
 category: infographics
 ---
-Незадолго до ликвидации, мы собирались вводить в РИА Новости новые требования по работе с текстами. Если кому-то пригодится, будем только рады. При необходимости, можете скачать PDF-версии: [постраничную](https://mizinov.pro/download/ria-rules.pdf) или [плакатную](https://mizinov.pro/download/ria-rules-poster.pdf)...
+Незадолго до ликвидации, мы собирались вводить в&#160;РИА Новости новые требования по работе с&#160;текстами. Если кому-то пригодится, будем только рады. При необходимости, можете скачать PDF-версии: [постраничную](https://mizinov.pro/download/ria-rules.pdf) или [плакатную](https://mizinov.pro/download/ria-rules-poster.pdf)...
 
 ![](https://ic.pics.livejournal.com/quillcraft/13449910/345613/345613_original.png)
 
