@@ -71,7 +71,7 @@ main .article h4 a:visited, main .article p a:visited, main .article ul a:visite
 
 main .article h4 a:hover, main .article p a:hover, main .article ul a:hover, main .article ol a:hover { text-decoration: none; }
 
-main .article .date { font-feature-settings: 'ss02'; font-size: .65rem; line-height: .65rem; letter-spacing: .05rem; text-transform: uppercase; color: #778; margin-bottom: 1rem; }
+main .article .date { font-size: .65rem; line-height: .65rem; letter-spacing: .05rem; text-transform: uppercase; color: #778; margin-bottom: 1rem; }
 
 main .article blockquote { font-style: italic; border-left: 5px solid #eee; max-width: calc(100% - 4rem); margin: 3rem auto; padding: 0 0 0 1.5rem; }
 
